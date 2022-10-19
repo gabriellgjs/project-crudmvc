@@ -1,8 +1,6 @@
 {
     "require": {
-        "clancats/hydrahon": "^1.1",
-        "twbs/bootstrap": "5.2.2",
-        "components/font-awesome": "^6.2"
+        "clancats/hydrahon": "^1.1"
     },
     "autoload": {
         "psr-4": {
