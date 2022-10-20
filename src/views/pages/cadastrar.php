@@ -1,19 +1,26 @@
 <?php $render('header'); ?>
 
 <div class="container">
-<form>
+  <div>
+        <a class="text-body" href="<?=$base;?>">
+            <i class="fa-solid fa-arrow-left"></i> 
+        </a>
+  <div class="text-center">
+    <h2>Cadastro de Usuário</h2>
+  </div>
+<form class="validator" method="POST" action="<?=$base;?>/cadastrar">
   <div class="mb-3">
-    <label class="form-label">Nome</label>
-    <input type="email" class="form-control" name="nome">
+    <label class="form-label">Nome:</label>
+    <input data-rules="required|min=3" type="text" class="form-control" name="nome">
   </div>
   <div class="mb-3">
-    <label class="form-label">Email</label>
-    <input type="email" class="form-control" name="email">
+    <label class="form-label">Email:</label>
+    <input data-rules="required|email" type="email" class="form-control" name="email">
   </div>
 
   <div class="mb-3">
-    <label class="form-label">Senha</label>
-    <input type="password" class="form-control" name="senha">
+    <label class="form-label">Senha:</label>
+    <input data-rules="required|min=6" type="password" class="form-control" name="senha">
   </div>
 
   <div class="pt-5 text-center">
