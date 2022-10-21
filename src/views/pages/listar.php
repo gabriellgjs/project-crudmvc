@@ -32,7 +32,7 @@
                     </a>
                 </td>
                 <td>
-                    <a class="text-body" href="<?=$base;?>/usuario/<?=$user['id-usuario'];?>/excluir">
+                    <a class="text-body" href="<?=$base;?>/usuario/<?=$user['id-usuario'];?>/excluir" onclick="return confirm('Tem certeza que deseja excluir?')" >
                         <i class="fa-regular fa-trash-can"></i>
                         EXCLUIR
                     

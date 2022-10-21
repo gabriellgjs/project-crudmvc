@@ -9,12 +9,37 @@ class UsuarioController extends Controller {
     public function screenAdd() {
         $this->render('cadastrar');
     }
-    public function edit() {
-        $this->render('cadastrar');
+
+    public function edit($args) {
+        $user = Usuario::select()->where('id-usuario', $args['id'])->one();
+
+        $this->render('editar', [
+            'usuario'=> $user
+        ]);
     }
-    public function del() {
-        $this->render('cadastrar');
+    public function editAction($args) {
+        $nome = filter_input(INPUT_POST, 'nome');
+        $email = filter_input(INPUT_POST, 'email');
+
+        if($nome && $email){
+
+            Usuario::update()
+                ->set('nome', $nome)
+                ->set('email', $email)
+                ->where('id-usuario', $args['id'])
+            ->execute();
+
+            $this -> redirect('/usuarios');
+        }
+        $this -> redirect('/usuario/'.$args['id'].'/editar');
     }
+    public function del($args) {
+        Usuario::delete()
+            ->where('id-usuario', $args['id'])
+        ->execute();
+        $this->redirect('/usuarios');
+    }
+
 
     public function addAction(){
         $nome = filter_input(INPUT_POST, 'nome');

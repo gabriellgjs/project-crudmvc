@@ -6,7 +6,7 @@
             <i class="fa-solid fa-arrow-left"></i> 
         </a>
   <div class="text-center">
-    <h2>Cadastro de Usuário</h2>
+    <h3>Cadastro de Usuário</h3>
   </div>
 <form class="validator" method="POST" action="<?=$base;?>/cadastrar">
   <div class="mb-3">
@@ -23,7 +23,7 @@
     <input data-rules="required|min=6" type="password" class="form-control" name="senha">
   </div>
 
-  <div class="pt-5 text-center">
+  <div class=" text-center">
     <button type="submit" class="btn btn-success">
       <i class="fa-solid fa-plus"></i>
       Cadastrar</button>
