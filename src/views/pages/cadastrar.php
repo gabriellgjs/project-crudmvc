@@ -1,5 +1,4 @@
 <?php $render('header'); ?>
-
 <div class="container">
   <div>
         <a class="text-body" href="<?=$base;?>">
@@ -23,11 +22,11 @@
     <input data-rules="required|min=6" type="password" class="form-control" name="senha">
   </div>
 
-  <div class=" text-center">
-    <button type="submit" class="btn btn-success">
+  <div class=" text-center" ">
+    <button type="submit" class="btn btn-success" >
       <i class="fa-solid fa-plus"></i>
       Cadastrar</button>
-    <a href="<?=$base;?>" class="btn btn-danger">
+    <a href="<?=$base;?>" class="btn btn-danger" >
         <i class="fa-solid fa-x"></i>
         Cancelar
     </a>
